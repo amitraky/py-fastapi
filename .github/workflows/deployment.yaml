@@ -33,7 +33,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /home/ubuntu/
+            cd /home/ubuntu/py-fastapi
             git pull
             docker build -t py-api .
             docker run -d -p 8000:8000 py-api
